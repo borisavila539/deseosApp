@@ -40,5 +40,11 @@ export class DeseosService {
     this.guardarStorage()
   }
 
+  editarLista(lista:Lista){
+    this.listas = this.listas.filter(listaData => listaData.id !== lista.id)
+    this.listas.push(lista)
+    this.guardarStorage()
+  }
+
 
 }
